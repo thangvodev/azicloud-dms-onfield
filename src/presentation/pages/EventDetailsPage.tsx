@@ -9,7 +9,7 @@ const EventDetailsPage = () => {
       <Header
         title={
           (
-            <div className="flex w-[calc(100%-90px)] justify-between">
+            <div className="flex w-[calc(100%-80px)] justify-center">
               <div>Chi tiết sự kiện</div>
             </div>
           ) as unknown as string

@@ -9,7 +9,7 @@ const HistoryPage: FC = () => {
       <Header
         title={
           (
-            <div className="flex w-[calc(100%-32px)] justify-center">
+            <div className="flex w-[calc(100%-80px)] justify-center">
               <div>Lịch sử tham gia</div>
             </div>
           ) as unknown as string

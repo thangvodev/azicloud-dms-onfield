@@ -3,12 +3,23 @@ import { Modal } from "zmp-ui";
 import { Button } from "../common/button";
 import CloseIcon from "../icons/CloseIcon";
 import QRcode from "../../static/images/qrcode.png";
+import { openMiniApp } from "zmp-sdk/apis";
 
 export const QRPopup: FC<Props> = ({ children }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const handleCancel = () => {
     setIsModalOpen(false);
+  };
+
+  const openSellingApp = () => {
+    openMiniApp({
+      appId: "709755930748893372",
+      params: {
+        env: "TESTING",
+        version: "1",
+      },
+    });
   };
 
   return (
@@ -57,15 +68,15 @@ export const QRPopup: FC<Props> = ({ children }) => {
               style={{
                 background: "linear-gradient(180deg, #6AAEF2 0%, #4884FF 100%)",
               }}
+              onClick={openSellingApp}
             />
-            <Button />
             <Button
               text={
                 <span className="text-sm font-medium text-secondary4">
                   Về trang chủ
                 </span>
               }
-              className="bg-secondary1 flex h-[33px] flex-none items-center justify-center rounded-[40px]"
+              className="flex h-[33px] flex-none items-center justify-center rounded-[40px] bg-secondary1"
             />
             <Button />
           </div>
